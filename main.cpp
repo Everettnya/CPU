@@ -82,7 +82,9 @@ int main() {
     mem[0x0B] = MUL;
     mem[0x0C] = STA; mem[0x0D] = 0x83;
     mem[0x0E] = PRS; mem[0x0F] = 0x90;
-    mem[0x10] = HLT;
+    mem[0x10] = PRT; mem[0x11] = 0x82;
+    mem[0x12] = PRT; mem[0x13] = 0x83;
+    mem[0x14] = HLT;
 
     run();
     int has_data = 0;
@@ -97,8 +99,8 @@ int main() {
                 printf("\n");
             }
         }
-    //printf("ADD: %d\n", mem[0x82]);
-    //printf("MUL: %d\n", mem[0x83]);
+    //printf("0x82: %d\n", mem[0x82]);
+    //printf("0x83: %d\n", mem[0x83]);
 
 
     return 0;
